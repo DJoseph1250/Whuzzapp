@@ -18,7 +18,7 @@ Angular.module(App, [
     'ionic'
 ]);
 
-new Loader(app).load(ChatsCtrl).load(CalendarFilter).load(RoutesConfig);
+new Loader(App).load(ChatsCtrl).load(CalendarFilter).load(RoutesConfig);
 
 if (Meteor.isCordova) {
     Angular.element(docuq).on('deviceready', onReady);
