@@ -9,6 +9,7 @@ import { Meteor } from 'meteor/meteor';
 
 import ChatsCtrl from '../controllers/chats.controller';
 import RoutesConfig from '../routes';
+import CalendarFilter from '../filters/calendar.filter';
 
 const App = 'Whuzzapp';
 
@@ -17,7 +18,7 @@ Angular.module(App, [
     'ionic'
 ]);
 
-new Loader(app).load(RoutesConfig);
+new Loader(app).load(ChatsCtrl).load(CalendarFilter).load(RoutesConfig);
 
 if (Meteor.isCordova) {
     Angular.element(docuq).on('deviceready', onReady);
