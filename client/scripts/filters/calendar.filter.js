@@ -12,3 +12,5 @@ export default class CalendarFilter extends Filter {
         });
     }
 }
+
+CalendarFilter.$name = 'calendar';
